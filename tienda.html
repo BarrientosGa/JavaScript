@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tienda.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Tienda</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="contenedorDeHeader">
+                <div class="logoDeTienda">
+                    <p>La pelota siempre al 10</p>
+                </div>
+                <div class="barraDeNavegacion">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                    </ul>
+                </div>
+                <div class="logoCarritoDeCompras">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="botonDeModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <span>0</span>
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tu carrito de compras</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-bs-dismiss="modal">Seguir comprando</button>
+                                <button type="button">Finalizar compra</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="contenedorMainTienda">
+            <div class="barraDeBusqueda">
+                <input type="search" placeholder="Busca tu camiseta favorita aca">
+            </div>
+            <div class="filtrosDeLaTienda">
+                <h1>Filtros</h1>
+                <span>Destacados</span>
+                <h2>Marca</h2>
+                <ul>
+                    <li>Nike</li>
+                    <li>Adidas</li>
+                    <li>Puma</li>
+                    <li>Kappa</li>
+                </ul>
+                <h3>Precio</h3>
+                <ul>
+                    <li>Mayor a 1000</li>
+                    <li>Mayor a 2000</li>
+                    <li>Mayor a 3000</li>
+                </ul>
+            </div>
+            <div class="camisetaDelPSG">
+                <p>Camiseta titular del PSG 2021/2022</p>
+                <p>$1000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelBarcelona">
+                <p>Camiseta titular del Barcelona 2021/2022</p>
+                <p>$1000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelLiverpool">
+                <p>Camiseta suplente del Liverpool 2021/2022</p>
+                <p>$1000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelBayerMunich">
+                <p>Camiseta suplente del Bayer Munich 2021/2022</p>
+                <p>$2000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDeBoca">
+                <p>Camiseta titular de Boca 2020/2021</p>
+                <p>$2000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelArsenal">
+                <p>Camiseta titular del Arsenal 2020/2021</p>
+                <p>$2000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelCity">
+                <p>Camiseta titular del Manchester City 2021/2022</p>
+                <p>$3000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelMilan">
+                <p>Camiseta titular del Milan 2021/2022</p>
+                <p>$3000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelBorussia">
+                <p>Camiseta titular del Borussia Dortmund 2021/2022</p>
+                <p>$3000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelNapoli">
+                <p>Camiseta homenaje a Maradona 2021</p>
+                <p>$1000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDeRacing">
+                <p>Camiseta titular de Racing 2021/2022</p>
+                <p>$1000</p>
+                <p>Comprar articulo</p>
+            </div>
+            <div class="camisetaDelGenoa">
+                <p>Camiseta titular del Genoa 2019/2020</p>
+                <p>$1000</p>
+                <p>Comprar articulo</p>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
