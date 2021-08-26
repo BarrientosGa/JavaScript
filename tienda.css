@@ -62,10 +62,11 @@ body {
 }
 
 .filtrosDeLaTienda {
-    grid-row: 1;
-    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-column: 1;
     justify-self: center;
-    align-self: end;
+    padding-top: 80px !important;
+
 }
 
 .camisetaDelPSG {
@@ -285,12 +286,13 @@ body {
     font-weight: bold;
     padding-top: 20px !important;
 }
-
-.modal {
-    padding: 250px 400px !important;
+.filtrosDeLaTienda h4{
+    font-weight: bold;
+    padding-top: 20px !important;
 }
 
-.logoCarritoDeCompras .botonDeModal {
+
+.logoCarritoDeCompras {
     border-style: none;
     background-color: #90333d;
     border-radius: 60px;
@@ -305,16 +307,12 @@ body {
     height: 3.5vh;
 }
 
-.contenedorDeHeader .logoCarritoDeCompras i {
+.logoCarritoDeCompras i {
     font-size: 17px;
     padding-left: 4px !important;
 }
 
-.contenedorDeHeader .logoCarritoDeCompras span {
+.logoCarritoDeCompras span {
     font-weight: bold;
     padding-right: 2px !important;
-}
-
-.modal-header .modal-title {
-    padding-left: 10px !important;
 }
