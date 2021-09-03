@@ -67,18 +67,18 @@ console.log(pasandoStringAObjeto);
 
 
 // Tarea de DOM
-    let articulos= document.getElementsByClassName("comprarArticulos");
-    let span = document.getElementById("cantidadDeCosasEnCarrito");
-    let carrito = span.innerHTML;
-    let carritoVacio = 0;
+let articulos = document.getElementsByClassName("comprarArticulos");
+let span = document.getElementById("cantidadDeCosasEnCarrito");
+let carrito = span.innerHTML;
+let carritoVacio = 0;
 
-for(let i=0; i<articulos.length; i++){
-    articulos[i].addEventListener("click",sumarUnoAlCarrito)
+for (let i = 0; i < articulos.length; i++) {
+    articulos[i].addEventListener("click", sumarUnoAlCarrito)
 }
 
 function sumarUnoAlCarrito() {
     carritoVacio += 1;
     carrito = `${carritoVacio}`;
     span.innerHTML = carrito;
-
+    localStorage.setItem("CantidadDeArticulos", carritoVacio);
 }
