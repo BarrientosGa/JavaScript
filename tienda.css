@@ -330,3 +330,8 @@ body {
 }
 /* MAIN-FIN */
 
+/* FOOTER-INICIO */
+#contenidoDefooter{
+    width: 100%;
+    height: 90vh;
+}
