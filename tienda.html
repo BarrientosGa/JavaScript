@@ -10,116 +10,118 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="shortcut icon" href="img/futbol-solid.svg" type="image/x-icon">
     <title>Tienda</title>
 </head>
 
 <body>
     <header>
         <div class="container-fluid">
-            <div class="contenedorDeHeader">
-                <div class="logoDeTienda">
-                    <p>La pelota siempre al 10</p>
+            <div id="contenedorDeHeader">
+                <div id="logoDeTienda">
+                    <a href="index.html"><p>La pelota siempre al 10</p></a>
                 </div>
-                <div class="barraDeNavegacion">
+                <div id="barraDeNavegacion">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="tienda.html">Tienda</a></li>
+                        <li id="botonDeIniciarSesion">Iniciar sesión</li>
                     </ul>
                 </div>
-                <div class="logoCarritoDeCompras">
+                <div id="logoCarritoDeCompras">
                     <i class="fas fa-cart-arrow-down"></i>
-                    <span>0</span>
+                    <span id="cantidadDeCosasEnCarrito">0</span>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <div class="contenedorMainTienda">
-            <div class="barraDeBusqueda">
+        <div id="contenedorMainTienda">
+            <div id="barraDeBusqueda">
                 <input type="search" placeholder="Busca tu camiseta favorita aca">
             </div>
-            <div class="filtrosDeLaTienda">
+            <div id="filtrosDeLaTienda">
                 <h1>Filtros</h1>
-                <span>Destacados</span>
+                <span id="destacadoDefiltro">Destacados</span>
                 <h2>Marca</h2>
                 <ul>
-                    <li>Nike</li>
-                    <li>Adidas</li>
-                    <li>Puma</li>
-                    <li>Kappa</li>
+                    <li id="filtroNike">Nike</li>
+                    <li id="filtroAdidas">Adidas</li>
+                    <li id="filtroPuma">Puma</li>
+                    <li id="filtroKappa">Kappa</li>
                 </ul>
                 <h3>Precio</h3>
                 <ul>
-                    <li>Mayor a 1000</li>
-                    <li>Mayor a 2000</li>
-                    <li>Mayor a 3000</li>
+                    <li id="filtroMayorAMil">Mayor a 1000</li>
+                    <li id="filtroMayorADosMil">Mayor a 2000</li>
+                    <li id="filtroMayorATresMil">Mayor a 3000</li>
                 </ul>
                 <h4>Talles</h4>
                 <ul>
-                    <li>S</li>
-                    <li>M</li>
-                    <li>L</li>
+                    <li id="filtroTalleS">S</li>
+                    <li id="filtroTalleM">M</li>
+                    <li id="filtroTalleL">L</li>
                 </ul>
             </div>
-            <div class="camisetaDelPSG">
+            <div id="camisetaDelPSG" class= "fotoDeCamisetas">
                 <p>Camiseta titular del PSG 2021/2022</p>
                 <p>$1000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelBarcelona">
+            <div id="camisetaDelBarcelona" class= "fotoDeCamisetas">
                 <p>Camiseta titular del Barcelona 2021/2022</p>
                 <p>$1000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelLiverpool">
+            <div id="camisetaDelLiverpool" class="fotoDeCamisetas">
                 <p>Camiseta suplente del Liverpool 2021/2022</p>
                 <p>$1000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelBayerMunich">
+            <div id="camisetaDelBayerMunich" class="fotoDeCamisetas">
                 <p>Camiseta suplente del Bayer Munich 2021/2022</p>
                 <p>$2000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDeBoca">
+            <div id="camisetaDeBoca" class="fotoDeCamisetas">
                 <p>Camiseta titular de Boca 2020/2021</p>
                 <p>$2000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelArsenal">
+            <div id="camisetaDelArsenal" class="fotoDeCamisetas">
                 <p>Camiseta titular del Arsenal 2020/2021</p>
                 <p>$2000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelCity">
+            <div id="camisetaDelCity" class="fotoDeCamisetas">
                 <p>Camiseta titular del Manchester City 2021/2022</p>
                 <p>$3000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelMilan">
+            <div id="camisetaDelMilan" class="fotoDeCamisetas">
                 <p>Camiseta titular del Milan 2021/2022</p>
                 <p>$3000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelBorussia">
+            <div id="camisetaDelBorussia" class="fotoDeCamisetas">
                 <p>Camiseta titular del Borussia Dortmund 2021/2022</p>
                 <p>$3000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelNapoli">
+            <div id="camisetaDelNapoli" class="fotoDeCamisetas">
                 <p>Camiseta homenaje a Maradona 2021</p>
                 <p>$1000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDeRacing">
+            <div id="camisetaDeRacing" class="fotoDeCamisetas">
                 <p>Camiseta titular de Racing 2021/2022</p>
                 <p>$1000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
-            <div class="camisetaDelGenoa">
+            <div id="camisetaDelGenoa" class="fotoDeCamisetas">
                 <p>Camiseta titular del Genoa 2019/2020</p>
                 <p>$1000</p>
-                <p>Comprar articulo</p>
+                <a href="#" class="comprarArticulos">Comprar articulo</a>
             </div>
         </div>
     </main>

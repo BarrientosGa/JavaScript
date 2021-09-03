@@ -14,15 +14,15 @@ body {
     font-family: 'Archivo', sans-serif !important;
 
 }
-
-.contenedorDeHeader {
+/* HEADER-INICIO */
+#contenedorDeHeader {
     width: 100%;
     height: 10vh;
     display: flex;
     background-color: #ff6e5d;
 }
 
-.contenedorDeHeader .logoDeTienda p {
+#contenedorDeHeader #logoDeTienda p {
     position: relative;
     top: 12px;
     left: 5px;
@@ -30,18 +30,54 @@ body {
     font-family: 'Luckiest Guy', cursive;
 }
 
-.barraDeNavegacion ul {
+#barraDeNavegacion ul {
     display: flex;
     position: relative;
     left: 50vh !important;
     top: 20px;
 }
 
-.barraDeNavegacion li {
+#barraDeNavegacion li {
     padding-left: 15px !important;
 }
+#botonDeIniciarSesion{
+    border-style: none;
+    background-color:transparent;
+    position: relative;
+    left: 28em;
+    cursor: pointer;
+    
+}
+#logoCarritoDeCompras {
+    border-style: none;
+    background-color: #90333d;
+    border-radius: 60px;
 
-.contenedorMainTienda {
+}
+
+#contenedorDeHeader #logoCarritoDeCompras {
+    position: relative;
+    left: 50em;
+    top: 3vh;
+    width: 3%;
+    height: 3.5vh;
+}
+
+#logoCarritoDeCompras i {
+    font-size: 17px;
+    padding-left: 4px !important;
+}
+
+#logoCarritoDeCompras #cantidadDeCosasEnCarrito {
+    font-weight: bold;
+    padding-right: 2px !important;
+    font-size: 11px;
+}
+
+/* HEADER-FIN */
+
+/* MAIN-INICIO */
+#contenedorMainTienda {
     width: 100%;
     height: 160vh;
     display: grid;
@@ -50,18 +86,20 @@ body {
     grid-gap: auto;
 }
 
-.barraDeBusqueda {
+#barraDeBusqueda {
     grid-column: 2/3;
     grid-row: 1;
 }
 
-.barraDeBusqueda input {
+#barraDeBusqueda input {
     border-style: none;
     border-bottom: 3px solid grey;
     width: 150%;
 }
-
-.filtrosDeLaTienda {
+#barraDeBusqueda input:focus{
+    outline: none;
+}
+#filtrosDeLaTienda {
     grid-row: 1/2;
     grid-column: 1;
     justify-self: center;
@@ -69,7 +107,7 @@ body {
 
 }
 
-.camisetaDelPSG {
+#camisetaDelPSG {
     width: 50%;
     height: 30vh;
     background-image: url(img/camisetaDelPsg.jpg);
@@ -80,13 +118,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelPSG p {
+#camisetaDelPSG p,.comprarArticulos{
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelBarcelona {
+#camisetaDelBarcelona {
     width: 50%;
     height: 30vh;
     background-image: url(img/Camisetadelbarcelona.jpg);
@@ -97,13 +135,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelBarcelona p {
+#camisetaDelBarcelona p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelLiverpool {
+#camisetaDelLiverpool {
     width: 50%;
     height: 30vh;
     background-image: url(img/liverpool-2021-22-nike-away-kit-1.jpg);
@@ -114,13 +152,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelLiverpool p {
+#camisetaDelLiverpool p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelBayerMunich {
+#camisetaDelBayerMunich {
     width: 50%;
     height: 30vh;
     background-image: url(img/bayern-munich-2021-22-adidas-away-kit-1.jpg);
@@ -131,13 +169,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelBayerMunich p {
+#camisetaDelBayerMunich p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDeBoca {
+#camisetaDeBoca {
     width: 50%;
     height: 30vh;
     background-image: url(img/Tercera_Camiseta_Boca_Juniors_20-21_Azul_GK3096_01_laydown.jpg);
@@ -148,13 +186,13 @@ body {
     align-self: center;
 }
 
-.camisetaDeBoca p {
+#camisetaDeBoca p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelArsenal {
+#camisetaDelArsenal {
     width: 50%;
     height: 30vh;
     background-image: url(img/camiseta-adidas-arsenal-fc-authentic-primera-equipacion-2020-2021-active-maroon-white-0-500x500.jpg);
@@ -165,13 +203,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelArsenal p {
+#camisetaDelArsenal p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelCity {
+#camisetaDelCity {
     width: 50%;
     height: 30vh;
     background-image: url(img/manchester-city-2021-22-puma-home-kit-1.jpg);
@@ -182,13 +220,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelCity p {
+#camisetaDelCity p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelMilan {
+#camisetaDelMilan {
     width: 50%;
     height: 30vh;
     background-image: url(img/ac-milan-2021-22-puma-home-kit-10.jpg);
@@ -199,13 +237,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelMilan p {
+#camisetaDelMilan p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelBorussia {
+#camisetaDelBorussia {
     width: 50%;
     height: 30vh;
     background-image: url(img/borussia-dortmund-2021-22-puma-home-kit-1-1.jpg);
@@ -216,13 +254,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelBorussia p {
+#camisetaDelBorussia p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelNapoli {
+#camisetaDelNapoli {
     width: 50%;
     height: 30vh;
     background-image: url(img/camiseta-napoli-maradona1-41c17425bde837116616246266614865-640-0.jpg);
@@ -233,13 +271,13 @@ body {
     align-self: center;
 }
 
-.camisetaDelNapoli p {
+#camisetaDelNapoli p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDeRacing {
+#camisetaDeRacing {
     width: 50%;
     height: 30vh;
     background-image: url(img/600_600-K236165LW-K902I_kombat_player_jersey_regular_2021_azure_blue_talle_S_1.jpg);
@@ -250,13 +288,13 @@ body {
     align-self: center;
 }
 
-.camisetaDeRacing p {
+#camisetaDeRacing p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.camisetaDelGenoa {
+#camisetaDelGenoa {
     width: 50%;
     height: 30vh;
     background-image: url(img/D_NQ_NP_796356-MLA42265507308_062020-O.jpg);
@@ -267,52 +305,28 @@ body {
     align-self: center;
 }
 
-.camisetaDelGenoa p {
+#camisetaDelGenoa p {
     position: relative;
     top: 200px;
     left: 25px;
 }
 
-.filtrosDeLaTienda h1 {
+#filtrosDeLaTienda h1 {
     font-weight: bold;
 }
 
-.filtrosDeLaTienda h2 {
-    font-weight: bold;
-    padding-top: 20px !important;
-}
-
-.filtrosDeLaTienda h3 {
-    font-weight: bold;
-    padding-top: 20px !important;
-}
-.filtrosDeLaTienda h4{
+#filtrosDeLaTienda h2 {
     font-weight: bold;
     padding-top: 20px !important;
 }
 
-
-.logoCarritoDeCompras {
-    border-style: none;
-    background-color: #90333d;
-    border-radius: 60px;
-
-}
-
-.contenedorDeHeader .logoCarritoDeCompras {
-    position: relative;
-    left: 65%;
-    top: 3vh;
-    width: 3%;
-    height: 3.5vh;
-}
-
-.logoCarritoDeCompras i {
-    font-size: 17px;
-    padding-left: 4px !important;
-}
-
-.logoCarritoDeCompras span {
+#filtrosDeLaTienda h3 {
     font-weight: bold;
-    padding-right: 2px !important;
+    padding-top: 20px !important;
 }
+#filtrosDeLaTienda h4{
+    font-weight: bold;
+    padding-top: 20px !important;
+}
+/* MAIN-FIN */
+
