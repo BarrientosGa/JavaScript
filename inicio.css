@@ -18,7 +18,7 @@ body{
     width: 100%;
     height: 10vh;
     display: flex;
-    background-color: #ff6e5d;
+    background: linear-gradient(70deg, #ff6e5d,  #c54b4c);
 }
 
 .contenedorDeHeader .logoDeTienda p {
