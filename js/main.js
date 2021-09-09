@@ -71,6 +71,7 @@ let idDestacado = document.getElementById("destacadoFiltro");
 idDestacado.addEventListener("click", filtrarCamisetasDestacadas);
 const camisetasDestacadas = camisetasDeFutbol.filter(camisetaDeFutbol => camisetaDeFutbol.esDestacada == true);
 let idContenedorCamisetas = document.getElementById("contenedorDeCamisetas");
+//let idPSG = document.getElementById("camisetaDelPSG");
 
 
 function filtrarCamisetasDestacadas() {
@@ -79,20 +80,22 @@ function filtrarCamisetasDestacadas() {
         camisetaDeFutbol => {
             let div = document.createElement("div");
             div.classList.add = "camiseta";
-            div.innerHTML = `<img src=${camisetaDeFutbol.img} alt="camiseta del psg">
+            div.innerHTML = 
+                                `<div class="camiseta">
+                                <img src=${camisetaDeFutbol.img}>
                                 <p>${camisetaDeFutbol.nombre}</p>
                                 <p class="precio-camiseta">${camisetaDeFutbol.precio}</p>
-                                <a href="#" class="comprarArticulos">Comprar articulo</a>`
+                                <a href="#" class="comprarArticulos">Comprar articulo</a>
+                                </div>`
                                 
             idContenedorCamisetas.appendChild(div);
             
         })
 }
 
-function eliminarCamisetas() {
-    idContenedorCamisetas.parentNode.removeChild(idContenedorCamisetas);
-    console.log(idContenedorCamisetas);
-
+function eliminarCamisetas(){
+    idContenedorCamisetas.innerHTML= " ";
+    //idPSG.parentNode.removeChild(idPSG)
 }
 
 
