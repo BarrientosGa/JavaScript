@@ -10,7 +10,7 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        <link rel="shortcut icon" href="img/futbol-solid.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/futbol-solid.svg" type="image/x-icon">
     <title>Tienda</title>
 </head>
 
@@ -19,7 +19,9 @@
         <div class="container-fluid">
             <div id="contenedorDeHeader">
                 <div id="logoDeTienda">
-                    <a href="index.html"><p>La pelota siempre al 10</p></a>
+                    <a href="index.html">
+                        <p>La pelota siempre al 10</p>
+                    </a>
                 </div>
                 <div id="barraDeNavegacion">
                     <ul>
@@ -38,11 +40,13 @@
     <main>
         <div id="contenedorMainTienda">
             <div id="barraDeBusqueda">
-                <input type="search" placeholder="Busca tu camiseta favorita aca">
+                <form>
+                    <input type="search" placeholder="Busca tu camiseta favorita aca">
+                </form>
             </div>
             <div id="filtrosDeLaTienda">
                 <h1>Filtros</h1>
-                <span id="destacadoDefiltro">Destacados</span>
+                <a href="#" id="destacadoFiltro">Destacado</a>
                 <h2>Marca</h2>
                 <ul>
                     <li id="filtroNike">Nike</li>
@@ -63,71 +67,85 @@
                     <li id="filtroTalleL">L</li>
                 </ul>
             </div>
-            <div id="camisetaDelPSG" class= "fotoDeCamisetas">
-                <p>Camiseta titular del PSG 2021/2022</p>
-                <p>$1000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelBarcelona" class= "fotoDeCamisetas">
-                <p>Camiseta titular del Barcelona 2021/2022</p>
-                <p>$1000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelLiverpool" class="fotoDeCamisetas">
-                <p>Camiseta suplente del Liverpool 2021/2022</p>
-                <p>$1000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelBayerMunich" class="fotoDeCamisetas">
-                <p>Camiseta suplente del Bayer Munich 2021/2022</p>
-                <p>$2000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDeBoca" class="fotoDeCamisetas">
-                <p>Camiseta titular de Boca 2020/2021</p>
-                <p>$2000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelArsenal" class="fotoDeCamisetas">
-                <p>Camiseta titular del Arsenal 2020/2021</p>
-                <p>$2000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelCity" class="fotoDeCamisetas">
-                <p>Camiseta titular del Manchester City 2021/2022</p>
-                <p>$3000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelMilan" class="fotoDeCamisetas">
-                <p>Camiseta titular del Milan 2021/2022</p>
-                <p>$3000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelBorussia" class="fotoDeCamisetas">
-                <p>Camiseta titular del Borussia Dortmund 2021/2022</p>
-                <p>$3000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelNapoli" class="fotoDeCamisetas">
-                <p>Camiseta homenaje a Maradona 2021</p>
-                <p>$1000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDeRacing" class="fotoDeCamisetas">
-                <p>Camiseta titular de Racing 2021/2022</p>
-                <p>$1000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
-            </div>
-            <div id="camisetaDelGenoa" class="fotoDeCamisetas">
-                <p>Camiseta titular del Genoa 2019/2020</p>
-                <p>$1000</p>
-                <a href="#" class="comprarArticulos">Comprar articulo</a>
+            <div id="contenedorDeCamisetas">
+                <div id="camisetaDelPSG" class="camiseta">
+                    <img src="img/camisetaDelPsg.jpg" alt="camiseta del psg">
+                    <p>Camiseta titular del PSG</p>
+                    <p class="precio-camiseta">$1000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelBarcelona" class="camiseta positionLeft-bar">
+                    <img src="img/Camisetadelbarcelona.jpg" alt="camiseta del barcelona">
+                    <p>Camiseta titular del Barcelona</p>
+                    <p class="precio-camiseta">$1000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelLiverpool" class="camiseta">
+                    <img src="img/liverpool-2021-22-nike-away-kit-1.jpg" alt="camiseta del liverpool">
+                    <p>Camiseta suplente del Liverpool</p>
+                    <p class="precio-camiseta">$1000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelBayerMunich" class="camiseta">
+                    <img src="img/bayern-munich-2021-22-adidas-away-kit-1.jpg" alt="camiseta del bayer munchen">
+                    <p>Camiseta suplente del B. Munich</p>
+                    <p class="precio-camiseta">$2000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDeBoca" class="camiseta positionRight-boca">
+                    <img src="img/Tercera_Camiseta_Boca_Juniors_20-21_Azul_GK3096_01_laydown.jpg" alt="camiseta de boca juniors">
+                    <p>Camiseta titular de Boca</p>
+                    <p class="precio-camiseta">$2000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelArsenal" class="camiseta positionRight-ars">
+                    <img src="img/camiseta-adidas-arsenal-fc-authentic-primera-equipacion-2020-2021-active-maroon-white-0-500x500.jpg" alt="camiseta del arsenal">
+                    <p>Camiseta titular del Arsenal</p>
+                    <p class="precio-camiseta">$2000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelCity" class="camiseta positionLeft-city">
+                    <img src="img/manchester-city-2021-22-puma-home-kit-1.jpg" alt="camiseta del manchester city">
+                    <p>Camiseta titular del Man. City</p>
+                    <p class="precio-camiseta">$3000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelMilan" class="camiseta">
+                    <img src="img/ac-milan-2021-22-puma-home-kit-10.jpg" alt="camiseta del milan">
+                    <p>Camiseta titular del Milan</p>
+                    <p class="precio-camiseta">$3000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelBorussia" class="camiseta positionLeft-borussia">
+                    <img src="img/borussia-dortmund-2021-22-puma-home-kit-1-1.jpg" alt="camiseta del borussia dortmund">
+                    <p>Camiseta titular del B. Dortmund</p>
+                    <p class="precio-camiseta">$3000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelNapoli" class="camiseta">
+                    <img src="img/camiseta-napoli-maradona1-41c17425bde837116616246266614865-640-0.jpg" alt=" camiseta del napoli">
+                    <p>Camiseta titular del Napoli</p>
+                    <p class="precio-camiseta">$1000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDeRacing" class="camiseta">
+                    <img src="img/600_600-K236165LW-K902I_kombat_player_jersey_regular_2021_azure_blue_talle_S_1.jpg" alt="camiseta de racing">
+                    <p>Camiseta titular de Racing</p>
+                    <p class="precio-camiseta">$1000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
+                <div id="camisetaDelGenoa" class="camiseta">
+                    <img src="img/D_NQ_NP_796356-MLA42265507308_062020-O.jpg" alt="camiseta del genoa">
+                    <p>Camiseta titular del Genoa</p>
+                    <p class="precio-camiseta">$1000</p>
+                    <a href="#" class="comprarArticulos">Comprar articulo</a>
+                </div>
             </div>
         </div>
-    </main> 
+    </main>
     <footer class="footer">
         <i class="far fa-copyright"></i>
-        <p>La pelota siempre al 10 - Derechos reservados.</p>
+        <p class="parrafo-footer">La pelota siempre al 10 - Derechos reservados.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous">
@@ -139,6 +157,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/sweetAlert.js"></script>
 </body>
 
 

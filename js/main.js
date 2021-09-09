@@ -1,31 +1,35 @@
 // Objetos y array
 class CamisetaDeFutbol {
-    constructor(nombreArg, marcaArg, stockArg, precioArg, esDestacadaArg, talleArg) {
+    constructor(idArg, nombreArg, marcaArg, precioArg, esDestacadaArg, talleArg, imgArg) {
+        this.id = idArg;
         this.nombre = nombreArg;
         this.marca = marcaArg;
-        this.stock = stockArg;
         this.precio = precioArg;
         this.esDestacada = esDestacadaArg;
         this.talle = talleArg;
+        this.img = imgArg;
     }
-    ventaDeCamiseta(cantidad) {
-        if (cantidad > this.stock) {
-            alert("solo contamos con esta cantidad: " + this.stock);
-        } else {
-            this.stock = this.stock - cantidad;
-        }
-    }
-
 }
 
-const camisetaDelPSG = new CamisetaDeFutbol("PSG", "nike", 2, 1000, true, "S");
-const camisetaDelBarcelona = new CamisetaDeFutbol("Barcelona", "Nike", 5, 1000, true, "M");
-const camisetaDelLiverpool = new CamisetaDeFutbol("Liverpool", "Nike", 10, 2000, false, "L")
+const camisetaDelPSG = new CamisetaDeFutbol(1, "Camiseta titular del PSG", "nike", 1000, true, "S", "img/camisetaDelPsg.jpg");
+const camisetaDelBarcelona = new CamisetaDeFutbol(2, "Camiseta titular del Barcelona", "Nike", 1000, true, "M", "img/Camisetadelbarcelona.jpg");
+const camisetaDelLiverpool = new CamisetaDeFutbol(3, "Camiseta suplente del Liverpool", "Nike", 2000, false, "L", "img/liverpool-2021-22-nike-away-kit-1.jpg");
+const camisetaDelBayer = new CamisetaDeFutbol(4, "Camiseta suplente del B. Munich", "Adidas", 2000, false, "S", "img/bayern-munich-2021-22-adidas-away-kit-1.jpg");
+const camisetaDeBoca = new CamisetaDeFutbol(5, "Camiseta titular de Boca", "Adidas", 2000, false, "M", "img/Tercera_Camiseta_Boca_Juniors_20-21_Azul_GK3096_01_laydown.jpg");
+const camisetaDelArsenal = new CamisetaDeFutbol(6, "Camiseta titular del Arsenal", "Adidas", 2000, false, "L", "img/camiseta-adidas-arsenal-fc-authentic-primera-equipacion-2020-2021-active-maroon-white-0-500x500.jpg");
+const camisetaDelManchesterCity = new CamisetaDeFutbol(7, "Camiseta titular del Man. City 2021/2022", "Puma", 3000, false, "S", "img/manchester-city-2021-22-puma-home-kit-1.jpg");
+const camisetaDelMilan = new CamisetaDeFutbol(8, "Camiseta titular del Milan", "Puma", 3000, false, "M", "img/ac-milan-2021-22-puma-home-kit-10.jpg");
+const camisetaDelBorussiaDortmund = new CamisetaDeFutbol(9, "Camiseta titular del B. Dortmund", "Puma", 3000, false, "L", "img/borussia-dortmund-2021-22-puma-home-kit-1-1.jpg");
+const camisetaDelNapoli = new CamisetaDeFutbol(10, "Camiseta titular del Napoli", "Kappa", 1000, false, "S", "img/camiseta-napoli-maradona1-41c17425bde837116616246266614865-640-0.jpg");
+const camisetaDelRacing = new CamisetaDeFutbol(11, "Camiseta titular de Racing", "Kappa", 1000, false, "M", "img/600_600-K236165LW-K902I_kombat_player_jersey_regular_2021_azure_blue_talle_S_1.jpg");
+const camisetaDelGenoa = new CamisetaDeFutbol(12, "Camiseta titular del Genoa", "Kappa", 1000, false, "L", "img/D_NQ_NP_796356-MLA42265507308_062020-O.jpg");
 
+//console.log(camisetaDelPSG);
 
 const camisetasDeFutbol = [];
-camisetasDeFutbol.push(camisetaDelPSG, camisetaDelBarcelona, camisetaDelLiverpool)
-console.log(camisetasDeFutbol);
+camisetasDeFutbol.push(camisetaDelPSG, camisetaDelBarcelona, camisetaDelLiverpool, camisetaDelBayer, camisetaDeBoca, camisetaDelArsenal, camisetaDelManchesterCity, camisetaDelMilan,
+    camisetaDelBorussiaDortmund, camisetaDelNapoli, camisetaDelRacing, camisetaDelGenoa);
+//console.log(camisetasDeFutbol);
 //Fin de objetos y array
 
 
@@ -34,39 +38,16 @@ console.log(camisetasDeFutbol);
 //Primera entrega del proyecto final
 
 const camisetasQueValenMil = camisetasDeFutbol.filter(camisetaDeFutbol => camisetaDeFutbol.precio === 1000);
-console.log(camisetasQueValenMil);
+//console.log(camisetasQueValenMil);
 
 const aumentoDePrecio = camisetasDeFutbol.map(camisetaDeFutbol => camisetaDeFutbol.precio + 500);
-console.log(aumentoDePrecio);
-
-const camisetasDestacadas = camisetasDeFutbol.filter(camisetaDeFutbol => camisetaDeFutbol.esDestacada == true);
-console.log(camisetasDestacadas);
+//console.log(aumentoDePrecio);
 
 const barraDeBusqueda = camisetasDeFutbol.filter(camisetaDeFutbol => camisetaDeFutbol.nombre.includes("P"));
-console.log(barraDeBusqueda);
-
-//
-
-/*
-let edadDeUsuario=parseInt(prompt("Ingresa tu edad"));
-let guardandoDato= localStorage.setItem("edad",edadDeUsuario);
-let obtenerDato=localStorage.getItem("edad");
-console.log(typeof obtenerDato);
-*/
-
-// Local storage y JSON
-let objeto1 = {
-    id: 1,
-    producto: "Pan"
-};
-let guardarElDato = localStorage.setItem("objeto", objeto1);
-let pasandoObjetoAString = JSON.stringify(objeto1);
-console.log(pasandoObjetoAString);
-let pasandoStringAObjeto = JSON.parse(pasandoObjetoAString);
-console.log(pasandoStringAObjeto);
+//console.log(barraDeBusqueda);
 
 
-// Tarea de DOM
+// Numero del carrito
 let articulos = document.getElementsByClassName("comprarArticulos");
 let span = document.getElementById("cantidadDeCosasEnCarrito");
 let carrito = span.innerHTML;
@@ -81,4 +62,52 @@ function sumarUnoAlCarrito() {
     carrito = `${carritoVacio}`;
     span.innerHTML = carrito;
     localStorage.setItem("CantidadDeArticulos", carritoVacio);
+    localStorage.getItem("CantidadDeArticulos");
 }
+
+
+// Filtro destacado
+let idDestacado = document.getElementById("destacadoFiltro");
+idDestacado.addEventListener("click", filtrarCamisetasDestacadas);
+const camisetasDestacadas = camisetasDeFutbol.filter(camisetaDeFutbol => camisetaDeFutbol.esDestacada == true);
+let idContenedorCamisetas = document.getElementById("contenedorDeCamisetas");
+
+
+function filtrarCamisetasDestacadas() {
+    eliminarCamisetas()
+    camisetasDestacadas.forEach(
+        camisetaDeFutbol => {
+            let div = document.createElement("div");
+            div.classList.add = "camiseta";
+            div.innerHTML = `<img src=${camisetaDeFutbol.img} alt="camiseta del psg">
+                                <p>${camisetaDeFutbol.nombre}</p>
+                                <p class="precio-camiseta">${camisetaDeFutbol.precio}</p>
+                                <a href="#" class="comprarArticulos">Comprar articulo</a>`
+                                
+            idContenedorCamisetas.appendChild(div);
+            
+        })
+}
+
+function eliminarCamisetas() {
+    idContenedorCamisetas.parentNode.removeChild(idContenedorCamisetas);
+    console.log(idContenedorCamisetas);
+
+}
+
+
+
+
+
+/*
+respuesta = producto.filter(el => el.nombre.toLowerCase() == busqueda.toLowerCase())
+acumulador = ""
+*/
+
+/* 
+acumulador = ""
+respuesta.forEach(el => {
+    acumulador += `<h1>${el.nombre}</h1>
+    <p>${el.descripcion}</p>`})
+document.getElementById("contenedor").innerHTML = acumulador
+*/
