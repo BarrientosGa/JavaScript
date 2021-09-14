@@ -342,6 +342,7 @@ let buttonSearch = document.getElementById("button-search");
 
 
 
+
 buttonSearch.addEventListener("click",filterArticleSearch);
 function filterArticleSearch(){
     const filterArticle = camisetasDeFutbol.filter(nombreDeCamiseta => nombreDeCamiseta.nombre.toLowerCase() === inputSearch);
