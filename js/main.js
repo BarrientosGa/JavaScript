@@ -32,16 +32,6 @@ camisetasDeFutbol.push(camisetaDelPSG, camisetaDelBarcelona, camisetaDelLiverpoo
 
 //Fin de objetos y array
 
-
-
-
-//Primera entrega del proyecto final
-
-
-//console.log(camisetasQueValenMil);
-
-
-
 const barraDeBusqueda = camisetasDeFutbol.filter(camisetaDeFutbol => camisetaDeFutbol.nombre.includes("P"));
 //console.log(barraDeBusqueda);
 
@@ -319,3 +309,55 @@ function agregarCamisetasQueSonTalleM(){
     idContenedorCamisetas.appendChild(div);
     })
 }
+
+
+//L
+const filtroDeCamisetasTalleL = camisetasDeFutbol.filter(camisetaDeFutbol => camisetaDeFutbol.talle == "L");
+let filtroTalleL = document.getElementById("filtroTalleL");
+filtroTalleL.addEventListener("click",filtrarCamisetasQueSonTalleL);
+
+function filtrarCamisetasQueSonTalleL(){
+    vaciarContenedorDeCamisetas()
+    agregarCamisetasQueSonTalleL()
+}
+function agregarCamisetasQueSonTalleL(){
+    filtroDeCamisetasTalleL.forEach(camisetaDeFutbol =>{
+        let div = document.createElement("div");
+        div.innerHTML = 
+                        `<div class="camiseta">
+                        <img src=${camisetaDeFutbol.img}>
+                        <p>${camisetaDeFutbol.nombre}</p>
+                        <p class="precio-camiseta">$ ${camisetaDeFutbol.precio}</p>
+                        <a href="#" class="comprarArticulos">Comprar articulo</a>
+                        </div>`
+
+    idContenedorCamisetas.appendChild(div);
+    })
+}
+
+// Barra de busqueda
+
+let inputSearch = document.getElementById("input-search").value.toLowerCase();
+let buttonSearch = document.getElementById("button-search");
+
+
+
+buttonSearch.addEventListener("click",filterArticleSearch);
+function filterArticleSearch(){
+    const filterArticle = camisetasDeFutbol.filter(nombreDeCamiseta => nombreDeCamiseta.nombre.toLowerCase() === inputSearch);
+    vaciarContenedorDeCamisetas()
+    filterArticle.forEach(camisetaDeFutbol => {
+        let div = document.createElement("div");
+            div.innerHTML = 
+                            `<div class="camiseta">
+                            <img src=${camisetaDeFutbol.img}>
+                            <p>${camisetaDeFutbol.nombre}</p>
+                            <p class="precio-camiseta">$ ${camisetaDeFutbol.precio}</p>
+                            <a href="#" class="comprarArticulos">Comprar articulo</a>
+                            </div>`
+    
+        idContenedorCamisetas.appendChild(div);
+    })
+} 
+
+

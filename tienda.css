@@ -82,7 +82,7 @@ body {
 /* MAIN-INICIO */
 #contenedorMainTienda {
     display: flex;
-    height: 250vh;
+    height: 240vh;
     justify-content: center;
 
 }
@@ -93,10 +93,23 @@ body {
     left: 100px;
 }
 
+#contenedorMainTienda #button-search{
+    position: relative;
+    left: 300px;
+    bottom: 22px;
+    border-style: none;
+    background-color: inherit;
+}
+
+#button-search .fa-search{
+    color: lightcoral !important;
+    font-size: 20px;
+}
+
 #barraDeBusqueda input {
     border-style: none;
     border-bottom: 1px solid grey;
-    width: 150%;
+    width: 130%;
 }
 
 #barraDeBusqueda input:focus {
