@@ -235,7 +235,7 @@ function filtrarCamisetasQueSonTalle(talle){
 
 
 //Carrito
-
+/*
 class Carrito {
     constructor(identificadorArg){
         this.iden = identificadorArg;
@@ -270,6 +270,6 @@ const identificadoresDeCamisetas = [];
 identificadoresDeCamisetas.push(idCamisetaPSG,idCamisetaBarcelona,idCamisetaLiverpool,idCamisetaMunich,
     idCamisetaBoca,idCamisetaArsenal,idCamisetaCity,idCamisetaMilan,idCamisetaDortmund,idCamisetaNapoli,
     idCamisetaRacing,idCamisetaGenoa);
-
+*/
 
 
