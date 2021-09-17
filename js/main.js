@@ -58,10 +58,10 @@ function sumarUnoAlCarrito() {
 
 
 // Filtro destacado
-let filtroDestacado = document.getElementById("destacadoFiltro");
-filtroDestacado.addEventListener("click", filtrarCamisetasDestacadas);
+let filtroDestacado = $("#destacadoFiltro");
+filtroDestacado.click(filtrarCamisetasDestacadas);
 const camisetasDestacadas = camisetasDeFutbol.filter(camisetaDeFutbol => camisetaDeFutbol.esDestacada == true);
-let idContenedorCamisetas = document.getElementById("contenedorDeCamisetas");
+let idContenedorCamisetas = $("#contenedorDeCamisetas");
 
 function filtrarCamisetasDestacadas() {
     vaciarContenedorDeCamisetas()
@@ -70,23 +70,18 @@ function filtrarCamisetasDestacadas() {
 }
 
 function vaciarContenedorDeCamisetas() {
-    idContenedorCamisetas.innerHTML = " ";
+    idContenedorCamisetas.html(" ");
 }
 
 function agregarCamisetasDestacadas() {
     camisetasDestacadas.forEach(
         camisetaDeFutbol => {
-            let div = document.createElement("div");
-            div.innerHTML =
-                `<div class="camiseta">
-                                <img src=${camisetaDeFutbol.img}>
-                                <p>${camisetaDeFutbol.nombre}</p>
-                                <p class="precio-camiseta">$ ${camisetaDeFutbol.precio}</p>
-                                <a href="#" class="comprarArticulos">Comprar articulo</a>
-                                </div>`
-
-            idContenedorCamisetas.appendChild(div);
-
+            idContenedorCamisetas.append( `<div class="camiseta">
+            <img src=${camisetaDeFutbol.img}>
+            <p>${camisetaDeFutbol.nombre}</p>
+            <p class="precio-camiseta">$ ${camisetaDeFutbol.precio}</p>
+            <a href="#" class="comprarArticulos">Comprar articulo</a>
+            </div>`);
         })
 }
 
