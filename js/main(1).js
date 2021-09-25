@@ -214,8 +214,7 @@ $(document).ready(function () {
     //Agregar articulos dinamicos al html
     const urlJson = "js/archivo.json";
     let carrito = [];
-    //let idTBody = $("#idTBody");
-    //let idlogoDeCarrito = $("#idlogoDeCarrito");
+    let idTBody = $("#idTBody");
     $.getJSON(urlJson, function (respuesta, estado) {
         if (estado === "success") {
             let misDatos = respuesta;
@@ -230,19 +229,81 @@ $(document).ready(function () {
                 $(`#btn${producto.id}`).on('click', function () {
                     if (!existe(producto.id)) {
                         carrito.push(misDatos[producto.id]);
-                        console.log(carrito);
-                    }
-                    else {
+
+                    } else {
                         console.log("ya existe el producto");
                     }
+
                     function existe(id) {
                         return (carrito.find(producto => producto.id === id));
                     }
-                }) // evento click
-            }) //foreach mis datos
 
+                    console.log(carrito);
+                    carrito.forEach(articulo => {
+                        idTBody.append(`
+                                <tr>
+                                    <th><img src=${articulo.img} class="imagenEnCarrito"></th>
+                                    <th><p class="precio-camiseta">$ ${articulo.precio}</p></th>
+                                    <th>
+                                        <form>
+                                            <input type="number" value= 0  id="input-number${articulo.id}">
+                                        </form>
+                                    </th>
+                                    <th id="precioTotalTable${articulo.id}"></th>
+                                </tr>
+                            `)
+                        $(".imagenEnCarrito").css({
+                            "widht": "3%",
+                            "height": "7vh"
+                        })
+                        //metodo change() para input type "number"
+                        let input = $(`#input-number${articulo.id}`);
+                        input.change(() => {
+                            let valueInput = input.val();
+                            let cantidad = parseInt(valueInput);
+                            if (cantidad <= articulo.stock) {
+                                let precioTotal = cantidad * articulo.precio;
+                                console.log(precioTotal);
+                                let tagId = $(`#precioTotalTable${articulo.id}`);
+                                console.log(tagId.html(precioTotal));
+                                tagId.html(precioTotal);
+
+                            } else {
+                                console.log(`Solo contamos con stock de ${articulo.stock}`);
+                            }
+                        }) // input-change()
+                        //Boton vaciar el carrito
+                        let idEmptyCarrito = $("#idEmptyCarrito");
+                        idEmptyCarrito.on("click", vaciarCarrito);
+
+                        function vaciarCarrito() {
+                            carrito = [] ;
+                            console.log(carrito)
+                            idTBody.html("");
+                        }
+                        //Boton procesar compra
+                        let idProcessBuy = $("#idProcessBuy");
+                        idProcessBuy.on("click", procesarCompra);
+
+                        function procesarCompra() {
+                            Swal.fire(
+                                'Gracias por tu compra!',
+                                'Te esperamos nuevamente!',
+                                `success`
+                            )
+                            window.setTimeout(reloadPage, 2000);
+                        }
+                        //Recargar la pagina 
+                        function reloadPage() {
+                            location.reload(true);
+                        }
+
+                }) //carrito foreach
+            }) // evento click
+            }) //foreach mis datos
+        
         } // if del success 
 
 
-    }) // getJSON
-}) //ready
+    })// getJSON
+})//ready
