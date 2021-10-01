@@ -240,3 +240,36 @@ body {
 }
 
 /*Estilo para popUp carrito*/
+.modal-content{
+    position: relative;
+    left: 30em;
+    top: 10em;
+}
+.modal-header .modal-title{
+    position: relative;
+    left: 8em;
+}
+.modal-footer button{
+    position: relative;
+    right: 7em;
+    margin-left: 50px !important;
+    border-radius: 8px;
+    border-style: none !important;
+    border: 1px solid black !important;
+    color: white !important;
+    font-family: 'Archivo', sans-serif !important;
+    background: linear-gradient(to left, #0c734d, #08ba48);
+    font-weight: bold;
+} 
+.modal-footer #idEmptyCarrito{
+    background: #c92b57;
+}
+
+/* tamaño de imagen del producto en carrito */
+.imagenEnCarrito{
+    width: 50%;
+    height: 7vh;
+}
+
+
+
