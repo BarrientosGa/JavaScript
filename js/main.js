@@ -65,7 +65,6 @@ $(document).ready(function () {
                     } else {
                         carritoVacio = localStorage.getItem("CantidadDeArticulos");
                         let number_String = parseInt(carritoVacio);
-                        //console.log(typeof(number_String));
                         number_String += 1;
                         localStorage.setItem("CantidadDeArticulos", number_String);
                         span.html(`${number_String}`);
@@ -187,7 +186,6 @@ $(document).ready(function () {
                         } else {
                             carritoVacio = localStorage.getItem("CantidadDeArticulos");
                             let number_String = parseInt(carritoVacio);
-                            //console.log(typeof(number_String));
                             number_String += 1;
                             localStorage.setItem("CantidadDeArticulos", number_String);
                             span.html(`${number_String}`);
@@ -326,7 +324,6 @@ $(document).ready(function () {
                         } else {
                             carritoVacio = localStorage.getItem("CantidadDeArticulos");
                             let number_String = parseInt(carritoVacio);
-                            //console.log(typeof(number_String));
                             number_String += 1;
                             localStorage.setItem("CantidadDeArticulos", number_String);
                             span.html(`${number_String}`);
@@ -465,7 +462,6 @@ $(document).ready(function () {
                         } else {
                             carritoVacio = localStorage.getItem("CantidadDeArticulos");
                             let number_String = parseInt(carritoVacio);
-                            //console.log(typeof(number_String));
                             number_String += 1;
                             localStorage.setItem("CantidadDeArticulos", number_String);
                             span.html(`${number_String}`);
@@ -599,7 +595,6 @@ $(document).ready(function () {
                         } else {
                             carritoVacio = localStorage.getItem("CantidadDeArticulos");
                             let number_String = parseInt(carritoVacio);
-                            //console.log(typeof(number_String));
                             number_String += 1;
                             localStorage.setItem("CantidadDeArticulos", number_String);
                             span.html(`${number_String}`);
@@ -725,7 +720,6 @@ $(document).ready(function () {
                                 } else {
                                     carritoVacio = localStorage.getItem("CantidadDeArticulos");
                                     let number_String = parseInt(carritoVacio);
-                                    //console.log(typeof(number_String));
                                     number_String += 1;
                                     localStorage.setItem("CantidadDeArticulos", number_String);
                                     span.html(`${number_String}`);
