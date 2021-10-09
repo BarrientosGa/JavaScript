@@ -279,6 +279,9 @@ $(document).ready(function () {
                 const filtroDeCamisetasMarca = misDatos.filter(camisetaDeFutbol => camisetaDeFutbol.marca == marca);
                 idContenedorCamisetas.html(" ");
                 filtroDeCamisetasMarca.forEach(producto => {
+                    // modifique el tamaño del contenedor porque quedaba mucho espacio
+                    $("#contenedorMainTienda,#contenedorDeCamisetas").css("height", "70vh");
+                    $("#contenedorMainTienda").css("height", "100vh")
                     idContenedorCamisetas.append(`<div class="camiseta">
                         <img src=${producto.img}>
                         <p>${producto.nombre}</p>
